@@ -1,0 +1,122 @@
+.main-container {
+  background: #000;
+  width: 100vw;
+  height: 100vh;
+  color: #eceded;
+}
+.text-color-primary {
+  color: #5658dd;
+}
+button {
+  color: #eceded;
+  background-color: #6163ff;
+  height: 36px;
+  display: inline-flex;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.1px;
+  font-weight: 600;
+  padding: 11px 31px;
+  height: 48px;
+  text-decoration: none !important;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+  letter-spacing: inherit;
+  white-space: nowrap;
+}
+button:disabled {
+  opacity: 0.6;
+}
+/* Custom-radio-btn */
+label {
+  display: block;
+  position: relative;
+  padding-left: 50px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Hide the default radio button */
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Creating own radio button to style */
+.custom-radio-button {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* button checked */
+label input:checked + .custom-radio-button {
+  background-color: #6163ff;
+}
+
+/* White dot on checked radio button (hidden) */
+label .custom-radio-button::after {
+  content: '';
+  display: none;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Show the dot on checked button */
+label input:checked + .custom-radio-button::after {
+  display: block;
+}
+.inner-container {
+  padding: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inner-container .para {
+  margin: 80px auto;
+  max-width: 50%;
+  line-height: 44px;
+  font-size: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .home-container .para {
+    max-width: 98%;
+  }
+}
+/* -----------------Form---------------------  */
+.inner-container .form {
+  max-width: 60%;
+}
+.inner-container .form .question {
+  margin: 32px 0;
+}
+.inner-container .form .form-btn {
+  background: #fff;
+  color: #6163ff;
+}
+.inner-container .form .form-btn.next-btn {
+  margin-left: auto;
+}
+@media only screen and (max-width: 768px) {
+  .inner-container .form {
+    max-width: 98%;
+  }
+}
